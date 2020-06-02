@@ -1,3 +1,3 @@
 <?php
 
-const SITE_NAME = "DARK SIDE";
+const SITE_NAME = 'DARK SIDE';

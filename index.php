@@ -1,12 +1,4 @@
-<?php session_start();?>
-<?php include "includes.php"?>
+<?php session_start();
+include 'includes.php';
 
-<!DOCTYPE HTML>
-<html>
-<head>
-    <title><?=SITE_NAME?></title>
-</head>
-<body>
-
-</body>
-</html>
+$routes = new Router();
