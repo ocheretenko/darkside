@@ -1,7 +1,7 @@
 <?php
-    if (!isset($title)) $title = "HELLO";
+    if (!isset($_SERVER['title'])) $_SERVER['title'] = "HELLO";
 ?>
 
 <head>
-    <title><?=$title;?></title>
+    <title><?=$_SERVER['title'];?></title>
 </head>

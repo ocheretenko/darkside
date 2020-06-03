@@ -1,4 +1,5 @@
 <?php
 
-include 'config/main_config.php';
-include 'classes/Router.php';
+require 'config/main_config.php';
+require 'classes/Router.php';
+require 'classes/Globals.php';

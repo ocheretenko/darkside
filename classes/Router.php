@@ -11,25 +11,40 @@ class Router
 
         $request = $_SERVER['REQUEST_URI'];
 
-        if ($routes->$request === NULL)
+        //cut GET part of request //?get=xx
+        if (strpos($request, '?') !== false)
+            $request = substr($request,0, strpos($request, '?'));
+
+        if ($routes->$request === NULL)     //no such route
         {
-            return;
+            $request = '/404';
         }
 
-        //require 'templates' . DIRECTORY_SEPARATOR . $routes->$request;
-        require 'templates' . DIRECTORY_SEPARATOR . 'login.phtml';
+        $request = $routes->$request;
+
+        $request = $this->FileExtension($request);
+
+        if ($this->TemplateExists($request))
+        {
+            require 'templates' . DIRECTORY_SEPARATOR . $request;
+        }
     }
 
-    public function AskTemplatePart($name)
+    public function FileExtension($file)
     {
-        if (strpos($name, '.phtml') === false) $name .= '.phtml';
+        if (strpos($file, '.phtml') === false)
+        {
+            return ($file . '.phtml');
+        }
 
-        $path = 'template_parts' . DIRECTORY_SEPARATOR . $name;
+        return $file;
+    }
 
-        echo $path;
 
-        if (file_exists($path))
-            require $path;
 
+    public function TemplateExists($name)
+    {
+        return file_exists( 'templates' . DIRECTORY_SEPARATOR . $name)
+            || file_exists('template_parts' . DIRECTORY_SEPARATOR . $name);
     }
 }

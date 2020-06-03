@@ -1,7 +1,18 @@
+<!DOCTYPE HTML>
+<html>
+
 <?php
+$_SERVER['title'] = 'LOGIN | DarkSide';
+Globals::AskTemplatePart('head');
+?>
 
 
-$title = 'LOGIN | DarkSide';
-$_SERVER['ROUTER']->AskTemplatePart('head');
+<body>
+    <form>
+        <input type="text" name="name" placeholder="login">
+        <input type="password" name="password" placeholder="password">
+        <input type="submit">
+    </form>
+</body>
 
-echo $title;
+</html>
