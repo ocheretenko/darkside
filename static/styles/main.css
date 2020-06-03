@@ -1,0 +1,26 @@
+nav span
+{
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    color: red;
+
+    margin: 0px;
+    border: thick double #32a1ce;
+}
+
+nav span a:link
+{
+    color: #7177ff;
+}
+
+nav span a:visited
+{
+    color: #7177ff;
+}
+
+nav span a:hover
+{
+    color:green;
+}

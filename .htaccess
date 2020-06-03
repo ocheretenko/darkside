@@ -3,4 +3,5 @@ RewriteBase /
 RewriteRule ^index\.php$ - [L]
 #RewriteCond %{REQUEST_FILENAME} !-f    #files access
 #RewriteCond %{REQUEST_FILENAME} !-d    #dirs access
+RewriteCond %{REQUEST_URI} !^/static/styles/
 RewriteRule . /index.php [L]
