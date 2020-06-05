@@ -2,6 +2,7 @@
   "routes": {
     "/": "home",
     "/login": "login",
-    "/404": "404"
+    "/404": "404",
+    "/registration": "registration"
   }
 }
