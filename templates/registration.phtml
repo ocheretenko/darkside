@@ -6,11 +6,17 @@
 const TITLE = SITE_NAME . ' - Registration';
 
 Globals::AskTemplatePart('head');
-Globals::AskTemplatePart('navigation');
 ?>
 
 <body>
-    <h2>REGISTRATION</h2>
+
+<?php
+    Globals::AskTemplatePart('header');
+    Globals::AskTemplatePart('navigation');
+?>
+
+<section>
+    <h2>Registration</h2>
     <form>
         <input type="text" name="login" placeholder="login">
         <br>
@@ -18,7 +24,7 @@ Globals::AskTemplatePart('navigation');
         <br>
         <input type="submit">
     </form>
-
+</section>
 </body>
 
 </html>

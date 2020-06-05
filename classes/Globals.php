@@ -25,7 +25,7 @@ class Globals
         }
         catch (Exception $exception)
         {
-            echo 'db error';
+            echo 'db error<br>';
         }
     }
 
